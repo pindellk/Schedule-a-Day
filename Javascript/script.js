@@ -1,12 +1,3 @@
-
-// Load content from local storage
-
-// If the time block is in the past: gray
-// Current: red
-// Future: green
-// use class $(".textarea") to modify colors
-
-
 // Display current date to top of schedule
 var currentDay = moment().format('dddd, MMMM Do');
 $("#currentDay").text = currentDay;
@@ -26,18 +17,23 @@ $(document).ready(function () {
         $("#" + key).find("textarea").val(value);
     });
 
+    // Modify hour block color based on current time
     $("textarea").each(function () {
         var currentHour = moment().hour();
         var hour = $(this).parent();
-        var key = hour[0].id.slice(-2);
-        console.log(currentHour, hour, key);
+        var key = parseInt(hour[0].id.replace("hour-", ""));
+        console.log(key);
         if (currentHour == key) {
             $(this).css("background-color", "red");
-        }
+        };
+        if (currentHour < key) {
+            $(this).css("background-color", "green");
+        };
+        if (currentHour > key) {
+            $(this).css("background-color", "gray");
+        };    
+    
     });
-
-    // ();
-
 
 });
 
