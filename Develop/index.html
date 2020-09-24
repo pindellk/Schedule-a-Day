@@ -99,37 +99,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"
       integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg=="
       crossorigin="anonymous"></script>
-    <!-- <script src="../javascript/script.js"></script> -->
-
-    <script type="text/javascript">
-
-      // Establish global variables
-
-      // Display current date to top of schedule
-      var currentDay = moment().format('dddd, MMMM Do');
-      $("#currentDay").text = currentDay;
-      $(".jumbotron").append(currentDay);
-
-      $(document).ready(function () {
-        // Add items to planner  
-        const saveItem = (text) => {
-          $("<textarea>").text = text;
-          $(".time-block").appendChild(saveItem);
-        };
-
-        // Create event listener for save button icon
-        $(".fa-save").on("click", function () {
-
-
-          // Save to local storage
-          localStorage.setItem("save", saveItem);
-        
-        });
-      });
-
-      console.log();
-
-    </script>
+    <script src="../javascript/script.js"></script>
 
 </body>
 
