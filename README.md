@@ -7,5 +7,5 @@ Get organized and schedule your day with an hourly planner. Enter notes and even
 [Link to external site](https://pindellk.github.io/Schedule-a-Day/)
 
 
-![Image](./X.png)
+![Image](./schedule.png)
 
