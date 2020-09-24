@@ -26,7 +26,17 @@ $(document).ready(function () {
         $("#" + key).find("textarea").val(value);
     });
 
-   $.each((moment().hour());
+    $("textarea").each(function () {
+        var currentHour = moment().hour();
+        var hour = $(this).parent();
+        var key = hour[0].id.slice(-2);
+        console.log(currentHour, hour, key);
+        if (currentHour == key) {
+            $(this).css("background-color", "red");
+        }
+    });
+
+    // ();
 
 
 });
